@@ -9,22 +9,22 @@ while True:
     if score == 0:
         break
     scores.append(score)
-print(f"Mean of scores is {sum(scores)/len(scores)}")
+avg = sum(scores)/len(scores)
+print(f"Mean of scores is {avg}")
 
 
+def calc_grades(avg):
+    if avg>=90:
+        grade = "A"
+    elif avg>=80 and avg<=89:
+        grade = "B"
+    elif avg>=70 and avg<=79:
+        grade = "C"
+    elif avg>=60 and avg<=69:
+        grade = "D"
+    elif avg<60:
+        grade = "F"
+    print(f"Your grade is {grade}")
 
-# avg = sum(scores)/len(scores)
-# print(avg)
-
-if score>=90:
-    print("Your Grade is A")
-elif score>=80 and score<=89:
-    print("Your Grade is B")
-elif score>=70 and score<=79:
-    print("Your Grade is a C")
-elif score>=60 and score<=69:
-    print("Your grade is a D")
-elif score<60:
-    print("Your grade is a F")
-
+calc_grades(avg)
 
