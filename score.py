@@ -1,21 +1,30 @@
 
+scores = []
+while True:
+    try:
+        score = int(input('Enter a score or 0 to quit: '))
+    except ValueError:
+        print(f"Please enter a number")
+        continue
+    if score == 0:
+        break
+    scores.append(score)
+print(f"Mean of scores is {sum(scores)/len(scores)}")
 
 
-scores= [75, 82, 92, 68, 78]
-print(scores)
 
-avg = sum(scores)/len(scores)
-print(avg)
+# avg = sum(scores)/len(scores)
+# print(avg)
 
-if avg>=90:
+if score>=90:
     print("Your Grade is A")
-elif avg>=80 and avg<=89:
+elif score>=80 and score<=89:
     print("Your Grade is B")
-elif avg>=70 and avg<=79:
+elif score>=70 and score<=79:
     print("Your Grade is a C")
-elif avg>=60 and avg<=69:
+elif score>=60 and score<=69:
     print("Your grade is a D")
-elif avg<60:
+elif score<60:
     print("Your grade is a F")
 
 
